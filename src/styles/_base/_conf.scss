@@ -1,0 +1,32 @@
+// ------------------------------------------
+// conf
+// ------------------------------------------
+
+// 配置项一：是否是移动端项目，默认：支持pc端项目
+$conf-mobile: 		false;
+$conf-press:		'.s-pressed'; //结合hightlight插件，按钮按下时添加的类名
+
+// 配置项二：兼容CSS3，默认：支持
+$conf-css3: 		false;
+
+// 配置项四：是否需要引入animation.css，默认：不引入
+$conf-animation: 	false; 
+
+// 配置项五：引用图片相对于style.scss的相对路径
+$conf-imgurl:		'../images/'; //私有图片
+$conf-comimgurl:    '../../../_common/_images/'; //公用图片
+
+// 配置项六：是否使用rem单位，默认：不引入
+$conf-rem:			false;
+$conf-remsize:		100;
+
+// 配置项七：组件相对于style.scss的相对路径
+$conf-element:      '_elements/';
+$conf-component:    '_components/';
+
+// 配置八：component的namespace名
+$conf-nsp-ele:      'edui-';
+
+
+// 配置项九：皮肤名称
+$conf-theme:       '_default';

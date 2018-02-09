@@ -1,0 +1,30 @@
+$side-w:300;
+// conf
+@import "_base/_conf";
+// theme and mixins
+@import "_base/_mixin";
+@import "_base/_breakpoint";
+// reset
+@import "_base/_reset"; // default
+.w {
+    &-section {
+        height: 100%;
+    }
+    &-side {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: unit($side-w);
+        @include bgurl("side.png");
+        background-repeat: repeat;
+    }
+   
+}
+#w-fullpage {
+    margin-left:unit($side-w);
+    height: 100%;
+}
+#w-menu{
+    
+}

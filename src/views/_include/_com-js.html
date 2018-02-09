@@ -1,0 +1,14 @@
+<script src="../scripts/jquery1.11.3.min.js"></script>
+<script src="../scripts/jquery.fullPage.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#w-fullpage').fullpage({
+            sectionsColor: ['blue', 'green', 'orange', 'red'],
+            scrollingSpeed: 700,
+            anchors: ['page1', 'page2', 'page3', 'page4'],
+            fixedElements: '.w-side',
+            menu: '#w-menu',
+            navigationTooltips: ['page1', 'page2', 'page3', 'page4'],
+        });
+    });
+</script>
