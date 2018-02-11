@@ -1,14 +1,26 @@
 <script src="../scripts/jquery1.11.3.min.js"></script>
 <script src="../scripts/jquery.fullPage.js"></script>
+<script src="../scripts/typing.js"></script>
 <script>
     $(document).ready(function () {
         $('#w-fullpage').fullpage({
-            sectionsColor: ['blue', 'green', 'orange', 'red'],
+            sectionsColor: ['#c1cbd7', 'green', '#eee', 'pink'],
             scrollingSpeed: 700,
             anchors: ['page1', 'page2', 'page3', 'page4'],
-            fixedElements: '.w-side',
             menu: '#w-menu',
             navigationTooltips: ['page1', 'page2', 'page3', 'page4'],
         });
+        $("#w-menu .w-menu__item").on('click',function(){
+            $('#w-menu .w-menu__item').removeClass('active');
+            $(this).addClass('active');
+        })
     });
+</script>
+<script type="text/javascript">
+    var typing = new Typing({
+        source: document.getElementById('source'),
+        output: document.getElementById('output'),
+        delay: 60
+    });
+    typing.start();
 </script>
