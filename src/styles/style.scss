@@ -14,11 +14,11 @@ $side-w:300;
     }
     40% {
         opacity: 0.5;
-        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px 5px #fff, 0 0 0 5px rgba(255, 255, 255, 0.5);
     }
     100% {
-        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255, 255, 255, 0.5);
-        transform: scale(1.2);
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px 5px #fff, 0 0 0 5px rgba(255, 255, 255, 0.5);
+        // transform: scale(1.05);
         opacity: 0;
     }
 }
@@ -45,6 +45,47 @@ $side-w:300;
     }
     100% {
         margin-right: unit(3);
+    }
+}
+
+@keyframes translateX {
+    25% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 1;
+    }
+    51% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+}
+
+@keyframes translateY {
+    0% {
+        transform: translateY(-50px);
+    }
+    25% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale {
+    25% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(1.15);
+    }
+    75% {
+        transform: scaleX(1);
     }
 }
 
@@ -97,6 +138,7 @@ $side-w:300;
     }
     .page1 {
         @include bgurl("bg1.png");
+        background-size: cover;
         .w-show {
             text-align: center;
             &__photo {
@@ -135,6 +177,7 @@ $side-w:300;
     }
     .page2 {
         @include bgurl("bg2.png");
+        background-size: cover;
         .w-info {
             text-align: center;
             &__list {
@@ -210,6 +253,7 @@ $side-w:300;
     }
     .page3 {
         @include bgurl("bg3.png");
+        background-size: cover;
         .w-skill {
             text-align: center;
             &__list {
@@ -271,6 +315,7 @@ $side-w:300;
     }
     .page4 {
         @include bgurl("bg4.png");
+        background-size: cover;
         .w-experience {
             text-align: center;
             &__list {
@@ -312,10 +357,9 @@ $side-w:300;
                 position: relative;
                 clear: left;
                 padding: unit(60) unit(20) unit(20);
-                background: rgba(0, 0, 0, 0.4);
+                background: rgba(0, 0, 0, 0.1);
                 width: unit(350);
-                border-radius: unit(5);
-                box-shadow: 0px 0px 5px 3px rgba(51, 153, 204, 0.1);
+                border-radius: unit(5); // box-shadow: 0px 0px 5px 3px rgba(51, 153, 204, 0.1);
                 margin-bottom: unit(20);
                 transition: all 0.3s;
                 cursor: pointer;
@@ -444,14 +488,122 @@ $side-w:300;
                 text-align: left;
                 word-break: break-all;
                 color: #fff;
-                span {}
+                font-weight: bold;
+                p {
+                    font-size: unit(14);
+                    color: #fff;
+                    font-weight: normal;
+                }
             }
         }
     }
     .page5 {
-        @include bgurl("bg1.png");
+        @include bgurl("bg5.png");
+        background-size: cover;
         .w-contact {
             text-align: center;
+            &__panel {
+                border-radius: unit(10);
+                margin: unit(80) auto;
+                width: unit(400);
+                height: unit(200);
+                background: rgba(0, 0, 0, 0.5)
+            }
+            p {
+                color: #fff;
+            }
+            &__list {
+                padding: unit(30) unit(20) unit(10);
+            }
+            &__ball {
+                position: relative;
+                display: inline-block;
+                width: unit(259);
+                height: unit(50);
+                .w-wrap {
+                    position: absolute;
+                    width: unit(50);
+                    height: unit(50);
+                }
+                .w-ball {
+                    width: unit(50);
+                    height: unit(50);
+                    box-shadow: 0 unit(-5) 0 rgba(0, 0, 0, 0.15) inset;
+                    // background-color: #397BF9;
+                    background: rgba(0, 0, 0, 0.1);
+                    border-radius: 50%;
+                    border: 1px dashed #99ccff;
+                    position: absolute;
+                    color: #fff;
+                    line-height: unit(48);
+                    font-size: unit(14);
+                    font-weight: bold;
+                }
+                .w-ball2 {
+                    left: 50px;
+                }
+                .w-ball3 {
+                    left: 100px;
+                }
+                .w-ball4 {
+                    left: 150px;
+                }
+                .w-wrap1a,
+                .w-wrap1b {
+                    transform: translateX(-100px);
+                    animation: translateX 800ms infinite ease-in;
+                }
+                .w-ball1a,
+                .w-ball1b {
+                  transform: translateY(-100px);
+                  animation: translateY 800ms infinite ease-in-out;
+                }
+                .w-wrap2a,
+                .w-wrap2b {
+                    transform: translateX(100px);
+                    left: 200px;
+                    position: absolute;
+                    animation: translateX 800ms infinite ease-in;
+                    animation-delay: -400ms;
+                }
+                .w-ball5a,
+                .w-ball5b {
+                    // background-color: #E3746B;
+                    animation: translateY 800ms infinite ease-in-out;
+                    animation-delay: -400ms;
+                }
+                .w-ball1b,
+                .w-ball5b,
+                .w-wrap1b,
+                .w-wrap2b {
+                  animation-direction: reverse;
+                }
+            }
+            &__item {
+                color: #fff;
+                width: 80%;
+                display: flex;
+                height: unit(20);
+                line-height: unit(20);
+                margin-bottom:unit(10);
+                transition: all 0.3s;
+                cursor: default;
+                border-left: 1px solid #99ccff;
+                span {
+                   
+                    &:first-child {
+                        text-align: right;
+                        flex: 1;
+                    }
+                    &:last-child {
+                        text-align: left;
+                        flex: 3;
+                    }
+                }
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
         }
     }
 }
@@ -467,7 +619,7 @@ $side-w:300;
             .w-menu__item {
                 transform: scale(2);
                 &:after {
-                    animation: shine linear 1.5s 0.5s infinite;
+                    animation: shine linear 2s 0.5s infinite;
                 }
                 &:before {
                     display: block;
@@ -547,6 +699,5 @@ $side-w:300;
                 font-size: unit(20);
             }
         }
-        
     }
 }
