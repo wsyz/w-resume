@@ -346,7 +346,6 @@ $side-w:300;
                 overflow: hidden;
                 cursor: pointer;
                 transition: all 0.5s;
-                
                 &:hover {
                     transform: scale(1.05);
                     box-shadow: 0 0 70px #111;
@@ -359,7 +358,7 @@ $side-w:300;
             &__card {
                 position: absolute;
                 left: 50%;
-                margin-left:unit(-420);
+                margin-left: unit(-420);
                 margin-top: unit(20);
                 position: relative;
                 padding: unit(60) unit(20) unit(20);
@@ -371,7 +370,7 @@ $side-w:300;
                 cursor: pointer;
                 &.right {
                     right: -50%;
-                    margin-left:unit(70);
+                    margin-left: unit(70);
                     left: unset;
                     .w-experience__name {
                         &:after {
@@ -519,9 +518,8 @@ $side-w:300;
             }
             p {
                 color: #fff;
-                
             }
-            &__motto{
+            &__motto {
                 font-size: unit(16);
             }
             &__list {
@@ -710,5 +708,70 @@ $side-w:300;
                 font-size: unit(20);
             }
         }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .w-title {
+        font-size: unit(60);
+    }
+    .w__container {
+        max-width: 70%;
+    }
+    #w-fullpage .page4 .w-experience{
+        max-width: 90%;
+    }
+    .w-info__list {
+        display: flex;
+    }
+    #w-fullpage .page2 .w-info__item span {
+        font-size: unit(36);
+        flex: 1;
+    }
+    #w-fullpage .page1 .w-show__des{
+        padding: 0;
+    }
+    #w-fullpage .page1 .w-show__intro{
+        font-size: unit(60);
+    }
+    .w-show__des,
+    .w-info__des,
+    .w-skill__des {
+        font-size: unit(36) !important;
+    }
+    #w-fullpage .page4 .w-experience__time{
+        transform: scale(1.3)
+    }
+    #w-fullpage .page4 .w-experience__des {
+        font-size: unit(30);
+    }
+    #w-fullpage .page4 .w-experience__name{
+        font-size: unit(24);
+    }
+    #w-fullpage .page4 .w-experience__des p {
+        font-size: unit(24);
+    }
+    #w-fullpage .page3 .w-skill__item {
+        height: unit(60);
+        line-height: unit(60);
+        margin-bottom: unit(20);
+        padding: 0 unit(20);
+        font-size: unit(32);
+        cursor: pointer;
+        border: 1px solid #99CCFF;
+        color: #99CCFF;
+        overflow: hidden;
+    }
+    #w-fullpage .page5 .w-contact__panel {
+        transform: scale(1.5)
+    }
+    #w-fullpage .page5 .w-contact__item {
+        font-size: unit(20);
+    }
+    #w-fullpage .page5 .w-contact__panel {
+        margin: unit(130) auto;
+    }
+    .w-contact__ball {
+        transform: scale(2)
     }
 }

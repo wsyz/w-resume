@@ -17,7 +17,7 @@ $conf-imgurl:		'../images/'; //私有图片
 $conf-comimgurl:    '../../../_common/_images/'; //公用图片
 
 // 配置项六：是否使用rem单位，默认：不引入
-$conf-rem:			true;
+$conf-rem:			false;
 $conf-remsize:		100;
 
 // 配置项七：组件相对于style.scss的相对路径
