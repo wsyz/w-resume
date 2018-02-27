@@ -740,13 +740,22 @@ $side-w:300;
         font-size: unit(36) !important;
     }
     #w-fullpage .page4 .w-experience__time{
-        transform: scale(1.3)
+        transform: scale(1.3);
+        top: unit(30);
     }
     #w-fullpage .page4 .w-experience__des {
         font-size: unit(30);
     }
     #w-fullpage .page4 .w-experience__name{
         font-size: unit(24);
+    }
+    #w-fullpage .page4 .w-experience__card{
+        transform: scale(1.05);
+        margin-top:unit(30);
+        margin-left: -430px;
+    }
+    #w-fullpage .page4 .w-experience__card.right{
+        margin-left:unit(80);
     }
     #w-fullpage .page4 .w-experience__des p {
         font-size: unit(24);
