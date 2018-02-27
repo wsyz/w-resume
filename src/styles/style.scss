@@ -17,8 +17,7 @@ $side-w:300;
         box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px 5px #fff, 0 0 0 5px rgba(255, 255, 255, 0.5);
     }
     100% {
-        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px 5px #fff, 0 0 0 5px rgba(255, 255, 255, 0.5);
-        // transform: scale(1.05);
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px 5px #fff, 0 0 0 5px rgba(255, 255, 255, 0.5); // transform: scale(1.05);
         opacity: 0;
     }
 }
@@ -90,8 +89,8 @@ $side-w:300;
 }
 
 .w__container {
-    width: unit(1200);
-    margin: auto;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .w-title {
@@ -189,6 +188,7 @@ $side-w:300;
                 display: inline-block;
                 min-width: unit(150);
                 text-align: center;
+                font-size: 0;
                 padding-top: unit(120);
                 text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.8);
                 i {
@@ -215,6 +215,8 @@ $side-w:300;
                 i {
                     &:before {
                         @extend %iconfont;
+                        display: inline-block;
+                        vertical-align: top;
                         color: #fff;
                         font-size: unit(50);
                     }
@@ -259,6 +261,7 @@ $side-w:300;
             &__list {
                 margin-top: unit(40);
                 margin-bottom: unit(40);
+                font-size: 0;
             }
             &__item {
                 position: relative;
@@ -343,6 +346,7 @@ $side-w:300;
                 overflow: hidden;
                 cursor: pointer;
                 transition: all 0.5s;
+                
                 &:hover {
                     transform: scale(1.05);
                     box-shadow: 0 0 70px #111;
@@ -353,9 +357,11 @@ $side-w:300;
                 }
             }
             &__card {
+                position: absolute;
+                left: 50%;
+                margin-left:unit(-420);
                 margin-top: unit(20);
                 position: relative;
-                clear: left;
                 padding: unit(60) unit(20) unit(20);
                 background: rgba(0, 0, 0, 0.1);
                 width: unit(350);
@@ -364,7 +370,9 @@ $side-w:300;
                 transition: all 0.3s;
                 cursor: pointer;
                 &.right {
-                    float: right;
+                    right: -50%;
+                    margin-left:unit(70);
+                    left: unset;
                     .w-experience__name {
                         &:after {
                             left: unit(-10);
@@ -511,6 +519,10 @@ $side-w:300;
             }
             p {
                 color: #fff;
+                
+            }
+            &__motto{
+                font-size: unit(16);
             }
             &__list {
                 padding: unit(30) unit(20) unit(10);
@@ -528,8 +540,7 @@ $side-w:300;
                 .w-ball {
                     width: unit(50);
                     height: unit(50);
-                    box-shadow: 0 unit(-5) 0 rgba(0, 0, 0, 0.15) inset;
-                    // background-color: #397BF9;
+                    box-shadow: 0 unit(-5) 0 rgba(0, 0, 0, 0.15) inset; // background-color: #397BF9;
                     background: rgba(0, 0, 0, 0.1);
                     border-radius: 50%;
                     border: 1px dashed #99ccff;
@@ -555,8 +566,8 @@ $side-w:300;
                 }
                 .w-ball1a,
                 .w-ball1b {
-                  transform: translateY(-100px);
-                  animation: translateY 800ms infinite ease-in-out;
+                    transform: translateY(-100px);
+                    animation: translateY 800ms infinite ease-in-out;
                 }
                 .w-wrap2a,
                 .w-wrap2b {
@@ -576,7 +587,7 @@ $side-w:300;
                 .w-ball5b,
                 .w-wrap1b,
                 .w-wrap2b {
-                  animation-direction: reverse;
+                    animation-direction: reverse;
                 }
             }
             &__item {
@@ -585,12 +596,12 @@ $side-w:300;
                 display: flex;
                 height: unit(20);
                 line-height: unit(20);
-                margin-bottom:unit(10);
+                margin-bottom: unit(10);
                 transition: all 0.3s;
                 cursor: default;
                 border-left: 1px solid #99ccff;
+                font-size: unit(14);
                 span {
-                   
                     &:first-child {
                         text-align: right;
                         flex: 1;
